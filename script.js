@@ -64,3 +64,43 @@ function updateDisplay(min, sec) {
   document.getElementById("minutes").innerHTML = min < 10 ? "0" + min : min;
   document.getElementById("seconds").innerHTML = sec < 10 ? "0" + sec : sec;
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const audio = document.getElementById('backgroundMusic');
+    const unmuteButton = document.getElementById('unmuteButton');
+
+    // Function to try and play audio
+    function tryPlayAudio() {
+        // Attempt to play the audio
+        const playPromise = audio.play();
+
+        if (playPromise !== undefined) {
+            playPromise.then(() => {
+                // Autoplay started successfully
+                console.log('Audio autoplayed successfully.');
+                unmuteButton.style.display = 'none'; // Hide the button if successful
+            }).catch(error => {
+                // Autoplay was prevented (e.g., by browser policy)
+                console.log('Autoplay prevented:', error);
+                unmuteButton.style.display = 'block'; // Show the unmute button
+            });
+        }
+    }
+
+    
+    tryPlayAudio();
+
+    unmuteButton.addEventListener('click', () => {
+        audio.play().then(() => {
+            unmuteButton.style.display = 'none';
+            console.log('Audio played by user interaction.');
+        }).catch(error => {
+            console.error('Error playing audio after user interaction:', error);
+        });
+    });
+    document.body.addEventListener('click', () => {
+        if (audio.paused) { 
+            tryPlayAudio(); 
+        }
+    }, { once: true }); 
+});
