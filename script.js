@@ -26,7 +26,7 @@ function startTimer() {
         isWorkTime = !isWorkTime;
         switchMode();
         clearInterval(interval);
-        startTimer(); // empieza la siguiente fase automáticamente
+        startTimer(); 
         return;
       }
       minutes--;
