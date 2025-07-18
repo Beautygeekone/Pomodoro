@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Pomodoro Timer</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Fonts and Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/1aa61872ed.js" crossorigin="anonymous"></script>
+
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <section>
+    <div class="container">
+      <h1>Pomodoro</h1>
+
+      <div class="painel">
+        <p id="work" class="active">work</p>
+        <p id="break">break</p>
+      </div>
+      
+       <div class="backgroundimage"></div>
+      <div class="timer">
+        <div class="circle">
+          <div class="time">
+            <p id="minutes">25</p>
+            <p>:</p>
+            <p id="seconds">00</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Controles corregidos -->
+      <div class="controls">
+        <button id="start" onclick="startTimer()">
+          <i class="fa-solid fa-play" style="color: #9a4583;"></i>
+        </button>
+        <button id="reset" onclick="resetTimer()">
+          <i class="fa-solid fa-rotate-left" style="color: #9a4583;"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Script -->
+  <script src="./script.js"></script>
+</body>
+</html>
+
+
