@@ -1,6 +1,6 @@
 :root {
     font-size: 62.5%;
-    --color-primary: #ff91cf; 
+    --color-primary: #ff91cf;
     --color-secondary: #9a4583b7;
     --color-font: #2c1b2c;
     --color-shadow: rgba(0, 0, 0, 0.1);
@@ -56,16 +56,16 @@ section {
 }
 
 .container {
-  width: min(4.5rem, 100%);
-  margin-inline: auto;
-  padding-block: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  position: relative;
-  z-index: 1;
-  padding: 20px;
+    width: min(4.5rem, 100%);
+    margin-inline: auto;
+    padding-block: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+    padding: 20px;
 }
 
 
